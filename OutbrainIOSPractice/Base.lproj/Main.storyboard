@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K5g-Dk-j4S">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article Table View Controller-->
+        <scene sceneID="NNh-wz-Olf">
+            <objects>
+                <tableViewController id="K5g-Dk-j4S" customClass="ArticleTableViewController" customModule="OutbrainIOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nIq-Xw-QoD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OBHeaderCell" rowHeight="40" id="nAp-Ve-vLU" customClass="OutbrainHeaderCell" customModule="OutbrainIOSPractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nAp-Ve-vLU" id="3pG-DA-Ojp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recommended to you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvr-Pz-fVJ" customClass="OBLabel">
+                                            <rect key="frame" x="6" y="11" width="375" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ele-rr-Bb8">
+                                            <rect key="frame" x="272" y="14" width="100" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="outbrain-logo"/>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="outbrainLogoButtun" destination="Ele-rr-Bb8" id="UOU-VG-DM8"/>
+                                    <outlet property="recommendedToYouLabel" destination="Uvr-Pz-fVJ" id="vG5-zb-x2q"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OBRecCell" rowHeight="120" id="S6Y-D0-0le" customClass="OutbrainRecCell" customModule="OutbrainIOSPractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="68" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S6Y-D0-0le" id="scT-Xa-WIf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfd-rL-LQS">
+                                            <rect key="frame" x="19" y="10" width="122" height="98"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-68-DfH">
+                                            <rect key="frame" x="158" y="11" width="201" height="86"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">5 Tips on Taking Charge of Your Earned Media 5 Tips on Taking Charge of Your Earned Media 5 Tips on Taking Charge of Your Earned Media</string>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="( Outbrain | Mobile Demo)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNT-wF-evS">
+                                            <rect key="frame" x="158" y="88" width="147" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTb-11-9s7">
+                                            <rect key="frame" x="117" y="10" width="24" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" image="adchoices"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Wfd-rL-LQS" firstAttribute="top" secondItem="scT-Xa-WIf" secondAttribute="top" constant="10" id="F4b-MM-KAS"/>
+                                        <constraint firstItem="Wfd-rL-LQS" firstAttribute="leading" secondItem="scT-Xa-WIf" secondAttribute="leading" constant="19" id="YmK-BN-Zdy"/>
+                                        <constraint firstItem="dTb-11-9s7" firstAttribute="trailing" secondItem="Wfd-rL-LQS" secondAttribute="trailing" id="aYg-J6-5QU"/>
+                                        <constraint firstItem="Wfd-rL-LQS" firstAttribute="top" secondItem="dTb-11-9s7" secondAttribute="firstBaseline" id="eNO-co-KFS"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wfd-rL-LQS" secondAttribute="bottom" constant="11.5" id="oiT-fF-cBB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="adChoicesButton" destination="dTb-11-9s7" id="2DO-qd-EMu"/>
+                                    <outlet property="recImageView" destination="Wfd-rL-LQS" id="Npx-O3-elt"/>
+                                    <outlet property="recSourceLabel" destination="xNT-wF-evS" id="v9R-fu-rLx"/>
+                                    <outlet property="recTitleLabel" destination="aPg-68-DfH" id="tlY-VW-BB7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="K5g-Dk-j4S" id="ZKa-wq-pde"/>
+                            <outlet property="delegate" destination="K5g-Dk-j4S" id="XrY-N1-0R6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nU2-FW-WDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="-5.8470764617691158"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="adchoices" width="12" height="12"/>
+        <image name="outbrain-logo" width="275" height="52"/>
+    </resources>
+</document>

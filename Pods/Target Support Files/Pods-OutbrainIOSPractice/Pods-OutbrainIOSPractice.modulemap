@@ -1,0 +1,6 @@
+framework module Pods_OutbrainIOSPractice {
+  umbrella header "Pods-OutbrainIOSPractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
